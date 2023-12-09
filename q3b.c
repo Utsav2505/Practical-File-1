@@ -3,13 +3,19 @@
 #include <stdio.h> //Importing header files, in this case its stdio.h
 int main(){
     int a; //declaring a integer variable to store the input integers.
-    printf("Enter a no. "); //printing a label to receive an integer.
+    printf("Enter a Positive no. "); //printing a label to receive an integer.
     scanf("%d",&a); //taking input from user for an integer
 
-    // Conditional/Ternary operator - is 'a' greater than or equal to 0 '?'
-    //, If yes then print "Entered no. is POSITIVE" 
-    //otherwise ':' print "Entered no. is NEGATIVE";
-    (a>=0) ? printf("Entered no. is POSITIVE") : printf("Entered no. is NEGATIVE");
+    int sum=0; // declaring a variable sum to store the sum of digits
+    while(a!=0){
+        //getting the last digit of the entered num
+        int digit = a%10;
+        sum += digit; //adding every digit to the existing sum
+        a /= 10;
+
+    }
+    //printing the value in sum variable in the output
+    printf("Sum of the digits of entered num is: %d", sum);
 
     return 0; //Returning 0 from main funcn denoting program is finished.
 }
