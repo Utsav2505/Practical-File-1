@@ -1,4 +1,4 @@
-//Q3-Program to tell if input no. is positive/negative
+//Q3-Program to generate first n terms of a fibonacci seq.
 //By Utsav(AIDS-B1)
 #include <stdio.h> //Importing header files, in this case its stdio.h
 int main(){
