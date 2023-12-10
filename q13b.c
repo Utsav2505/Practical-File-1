@@ -1,4 +1,4 @@
-//Q13 (a)- Program to add two matrices
+//Q13 (b)- Program to multiply two matrices
 //by - Utsav(AIDS-B1)
 
 //importing header files, in this case its stdio.h
