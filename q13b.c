@@ -20,19 +20,7 @@ void input(int order,int arr[order][order]){
         }
     }
 }
-//Create a func to find sum of both matrice
-void sum(int order, int arr1[order][order],int arr2[order][order],int result[order][order]){
-    for(int i=0;i<order;i++){     
-        //init a loop starting from 0
-        //and run until it becomes i=order-1       
-        for(int j=0;j<order;j++){
-            //init a loop starting from 0
-            //and run until it becomes i=order-1
-            result[i][j]=arr1[i][j]+arr2[i][j];
-            //adding the elements
-        }
-    }
-}
+
 void print(int order,int result[order][order]){
     //print label to print output
     printf("Values in Final Matrix are: \n");
@@ -47,6 +35,20 @@ void print(int order,int result[order][order]){
         printf("\n");
     }
 }
+void multiply(int order, int arr1[order][order], int arr2[order][order], int result[order][order]){
+    // Loop through each row of arr1
+    for(int i = 0; i < order; i++){
+        // Loop through each column of arr2
+        for(int j = 0; j < order; j++){
+            result[i][j] = 0; // Initialize the result at (i, j) to zero
+            // Multiply the corresponding elements of arr1 and arr2 and accumulate the sum
+            for(int k = 0; k < order; k++){
+                result[i][j] += arr1[i][k] * arr2[k][j];
+            }
+        }
+    }
+}
+
 int main(){
     int order;
     //printing label and taking input
@@ -60,8 +62,8 @@ int main(){
     input(order,arr1);
     printf("\n Enter elements of Matrix2 \n");
     input(order,arr2);
-    //adding both the matrices
-    sum(order,arr1,arr2,result);
+    //multiplying both the matrices
+    multiply(order,arr1,arr2,result);
     //printing the resulting matrices
     print(order,result);
     return 0;
