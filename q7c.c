@@ -1,4 +1,4 @@
-//Q7- Program to check input no. is armstrong or not
+//Q7(c)- Program to evaluate given algebraic expression.
 //by - Utsav(AIDS-B1)
 
 //importing header files, in this case its stdio.h

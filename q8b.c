@@ -1,4 +1,4 @@
-//Q7- Program to check input no. is Strong num or not
+//Q8 (b)- Program to check input no. is Strong num or not
 //by - Utsav(AIDS-B1)
 
 //importing header files, in this case its stdio.h
